@@ -12,6 +12,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/dmlzj/eros-plugin-iOS-alipay.git", :tag => s.version.to_s }
   s.source_files  = "Source/*.{h,m,mm}"
   s.requires_arc = true 
-  s.dependency "AlipaySDK-iOS", "15.5.5"
+  s.dependency "AlipaySDK-iOS", "15.6.8"
 
 end
