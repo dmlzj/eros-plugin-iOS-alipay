@@ -34,15 +34,13 @@ WX_EXPORT_METHOD(@selector(auth:callback:))
     
     [HYAliPayManager payWithOrderInfo:orderString fromScheme:scheme callback:callback];
 }
-
 - (void)auth:(NSDictionary *) params callback:(WXModuleCallback)callback {
     NSString *authString = [params objectForKey:@"authInfo"];
-    
     NSString *scheme = [params objectForKey:@"scheme"];
-    if (!scheme) {
-        scheme = kAliPayScheme;
-    }
-    [HYAliPayManager authWithInfo:authString fromScheme:scheme callback:callback];
-}
+       if (!scheme) {
+           scheme = kAliPayScheme;
+       }
+     [HYAliPayManager authWithInfo:authString fromScheme:scheme callback:callback];
+}
 
 @end
